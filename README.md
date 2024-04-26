@@ -11,14 +11,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ### To build a next.js app:
   create a next.js file using command "create-next-app + your file name"
-  echo "hello GitHub" #Bash
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+echo "hello GitHub" #Bash
+public static void main(String[]args){} //Java
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
