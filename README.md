@@ -1,6 +1,13 @@
+# Dashboard for visualizing conference summaries
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 ## Github page URL: https://loveyourself999.github.io/conference-dashboard/
+***
 ## Overall Idea
+### Build a dashboard application that visualize the youtube summaries to nevigate video content
+1. Create an information dashboard using Next.js and Recharts.(https://ably.com/blog/informational-dashboard-with-nextjs-and-recharts#creating-the-charts-component)
+2. Use D3 library for data visualization when developing the UI(https://d3js.org)
+3. Fetch data from the summaries data collected by Github Action
+4. Deploy dashboard app to GitHub Pages with GitHub Actions(https://pages.github.com)
 
 First, run the development server:
 
