@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-# Github page: https://loveyourself999.github.io/conference-dashboard/
-## Getting Started
+## Github page URL: https://loveyourself999.github.io/conference-dashboard/
+## Overall Idea
 
 First, run the development server:
 
