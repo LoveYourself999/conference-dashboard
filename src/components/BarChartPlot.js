@@ -40,6 +40,9 @@ const BarChartPlot = () => {
     return (
     <>
     <ResponsiveContainer width="100%" height="100%">
+     <style>
+            background-color: #f0f0f0;
+     </style>
         <BarChart width={730} height={250} data={data}>
              <XAxis dataKey="name" />
              <YAxis />
