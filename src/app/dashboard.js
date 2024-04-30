@@ -18,7 +18,7 @@ export function processData() {
         let links = [];
 
         parsedData.forEach(row => {
-          const keywords = row.keywords.split(',').map(keyword => keyword.trim());
+          const keywords = row.Keywords.split(',').map(keyword => keyword.trim());
           keywords.forEach((key) => {
             if (!keywordOccurrences[key]) {
               keywordOccurrences[key] = {
