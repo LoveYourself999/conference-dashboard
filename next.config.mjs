@@ -1,13 +1,13 @@
 /** @type {import('next').NextConfig} */
 
-// const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
     /**
      * Enable static exports for the App Router.
      *
      * @see https://nextjs.org/docs/app/building-your-application/deploying/static-exports
      */
-    output: "export",
+    // output: 'export',
     // basePath: isProd ? '/conference-dashboard' : '',
     /**
      * Disable server-based image optimization. Next.js does not support

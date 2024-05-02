@@ -4,7 +4,7 @@ import * as d3 from 'd3';
 const ForceGraph = ({ data }) => {
   const svgRef = useRef();
   const svgContainerRef = useRef();
-  const zoomLevelRef = useRef(2);
+  const zoomLevelRef = useRef(1);
 
   useEffect(() => {
     
@@ -101,43 +101,43 @@ const ForceGraph = ({ data }) => {
         .attr('y', (d) => d.y);
     });
     
-    // Handle zoom in/out
-    const handleZoom = (event) => {
-      const { deltaY } = event;
-      const zoomFactor = 1 + (deltaY * 0.001);
-      zoomLevelRef.current *= zoomFactor;
-      svgContainer.attr('transform', `scale(${zoomLevelRef.current})`);
-    };
+    // // Handle zoom in/out
+    // const handleZoom = (event) => {
+    //   const { deltaY } = event;
+    //   const zoomFactor = 1 + (deltaY * 0.001);
+    //   zoomLevelRef.current *= zoomFactor;
+    //   svgContainer.attr('transform', `scale(${zoomLevelRef.current})`);
+    // };
 
-    // Attach zoom event listener to the SVG container
-    svg.call(d3.zoom().on('zoom', handleZoom));
-    const drag = d3.drag()
-      .on('start', dragStarted)
-      .on('drag', dragged)
-      .on('end', dragEnded);
+    // // Attach zoom event listener to the SVG container
+    // svg.call(d3.zoom().on('zoom', handleZoom));
+    // const drag = d3.drag()
+    //   .on('start', dragStarted)
+    //   .on('drag', dragged)
+    //   .on('end', dragEnded);
 
-    // Apply drag behavior to nodes
-    node.call(drag);
+    // // Apply drag behavior to nodes
+    // node.call(drag);
 
-    // Drag started event handler
-    function dragStarted(event, d) {
-      if (!event.active) simulation.alphaTarget(0.3).restart();
-      d.fx = d.x;
-      d.fy = d.y;
-    }
+    // // Drag started event handler
+    // function dragStarted(event, d) {
+    //   if (!event.active) simulation.alphaTarget(0.3).restart();
+    //   d.fx = d.x;
+    //   d.fy = d.y;
+    // }
 
-    // Dragged event handler
-    function dragged(event, d) {
-      d.fx = event.x;
-      d.fy = event.y;
-    }
+    // // Dragged event handler
+    // function dragged(event, d) {
+    //   d.fx = event.x;
+    //   d.fy = event.y;
+    // }
 
-    // Drag ended event handler
-    function dragEnded(event, d) {
-      if (!event.active) simulation.alphaTarget(0);
-      d.fx = null;
-      d.fy = null;
-    }
+    // // Drag ended event handler
+    // function dragEnded(event, d) {
+    //   if (!event.active) simulation.alphaTarget(0);
+    //   d.fx = null;
+    //   d.fy = null;
+    // }
   }, [data]);
 
   return <svg ref={svgRef} />;
