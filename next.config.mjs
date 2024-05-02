@@ -9,6 +9,7 @@ const nextConfig = {
      */
     // output: 'export',
     // basePath: isProd ? '/conference-dashboard' : '',
+    reactStrictMode: true,
     /**
      * Disable server-based image optimization. Next.js does not support
      * dynamic features with static exports.
