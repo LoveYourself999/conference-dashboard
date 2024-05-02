@@ -4,7 +4,7 @@ import * as d3 from 'd3';
 const ForceGraph = ({ data }) => {
   const svgRef = useRef();
   const svgContainerRef = useRef();
-  const zoomLevelRef = useRef(1);
+  const zoomLevelRef = useRef(2);
 
   useEffect(() => {
     
