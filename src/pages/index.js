@@ -2,13 +2,14 @@ import Sidebar from '../components/Sidebar'
 import Navbar from '../components/Navbar'
 import { useEffect, useState } from 'react';
 import ForceGraph from './force-graph';
-
+import path from 'path';
 const Home = () => {
   const [data, setData] = useState('');
 
   useEffect(() => {
     // Fetch the CSV data from the server
-    fetch('/api/data')
+    const csvFilePath = path.join(process.cwd(), 'data', 'conference_data.csv');
+    fetch('.../data/conference_data.csv')
       .then((response) => response.text())
       .then((csvData) => setData(csvData));
   }, []);
