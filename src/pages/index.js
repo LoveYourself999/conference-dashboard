@@ -7,7 +7,7 @@ const Home = () => {
 
   useEffect(() => {
     // Fetch the CSV data from the server
-    fetch('.../public/data/conference-data')
+    fetch('https://raw.githubusercontent.com/LoveYourself999/conference-dashboard/main/public/data/conference_data.csv')
       .then((response) => response.text())
       .then((csvData) => setData(csvData));
   }, []);
