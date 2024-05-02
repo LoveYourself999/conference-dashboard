@@ -8,7 +8,7 @@ const nextConfig = {
      * @see https://nextjs.org/docs/app/building-your-application/deploying/static-exports
      */
     output: 'export',
-    // basePath: isProd ? '/conference-dashboard' : '',
+    basePath: isProd ? '/conference-dashboard' : '',
     reactStrictMode: true,
     /**
      * Disable server-based image optimization. Next.js does not support
