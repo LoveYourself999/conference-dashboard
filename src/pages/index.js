@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     // Fetch the CSV data from the server
     const csvFilePath = path.join(process.cwd(), 'data', 'conference_data.csv');
-    fetch('.../data/conference_data.csv')
+    fetch(csvFilePath)
       .then((response) => response.text())
       .then((csvData) => setData(csvData));
   }, []);
