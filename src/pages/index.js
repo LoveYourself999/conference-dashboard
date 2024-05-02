@@ -18,7 +18,7 @@ const Home = () => {
       <Sidebar />
       <main className="flex-grow ml-64 relative">
         <Navbar />
-        {data && <ForceGraph data={data} />}
+        {data && <ForceGraph data={data} src="/conference-dashboard"/>}
       </main>
     </div>
   );
