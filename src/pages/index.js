@@ -2,7 +2,7 @@ import Sidebar from '../components/Sidebar'
 import Navbar from '../components/Navbar'
 import { useEffect, useState } from 'react';
 import ForceGraph from './force-graph';
-
+import ErrorBoundary from './ErrorBoundary';
 const Home = () => {
   const [data, setData] = useState('');
 
@@ -15,11 +15,13 @@ const Home = () => {
 
   return (
     <div style={{ backgroundColor: '#F0F8FF' }}> {/* Changed background color to light gray */}
+    <ErrorBoundary>
       <Sidebar />
       <main className="flex-grow ml-64 relative">
         <Navbar />
         {data && <ForceGraph data={data} />}
       </main>
+    </ErrorBoundary>
     </div>
   );
 };
