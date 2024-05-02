@@ -8,7 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     // Fetch the CSV data from the server
-    fetch('/conference-dashboard/src/pages/api/data.js')
+    fetch('/api/data')
       .then((response) => response.text())
       .then((csvData) => setData(csvData));
   }, []);
